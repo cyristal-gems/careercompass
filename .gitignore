@@ -1,0 +1,23 @@
+# Private configuration
+.env
+.env.*
+!.env.example
+# Dependencies and generated output
+node_modules/
+.next/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.tsbuildinfo
+*.db
+.DS_Store
+.vercel/
+
+# Private assistant and maintainer notes
+AGENTS.md
+CLAUDE.md
+docs/MAINTENANCE.md
+__MACOSX/
