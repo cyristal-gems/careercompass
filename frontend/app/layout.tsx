@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { connection } from "next/server";
 import "./globals.css";
-const title = "JobTrackr | Your job search, in focus.";
+const title = "CareerCompass | Your job search, in focus.";
 const description =
   "A private job application tracking and analytics platform for managing opportunities, interviews, follow-ups, and job-search performance.";
 const siteUrl =
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    siteName: "JobTrackr",
+    siteName: "CareerCompass",
     type: "website",
     url: siteUrl,
   },

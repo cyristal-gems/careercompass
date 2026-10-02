@@ -1,10 +1,10 @@
 import { LegalPage } from "@/components/legal-page";
-export const metadata = { title: "Privacy | JobTrackr" };
+export const metadata = { title: "Privacy | CareerCompass" };
 export default function Privacy() {
   return (
     <LegalPage title="Privacy">
       <p>
-        JobTrackr stores information you provide to organize your private job
+        CareerCompass stores information you provide to organize your private job
         search: your name, email address, securely hashed password,
         applications, salary details, notes, contacts, interviews, follow-up
         dates, and status history.
@@ -18,7 +18,7 @@ export default function Privacy() {
       </p>
       <h2>Sharing and service providers</h2>
       <p>
-        JobTrackr does not sell your job-search data or publish your records to
+        CareerCompass does not sell your job-search data or publish your records to
         other users. Hosting, database, and email providers process information
         as needed to operate the service. Information may also be disclosed when
         required by law.

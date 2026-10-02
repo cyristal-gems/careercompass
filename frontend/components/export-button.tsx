@@ -24,7 +24,7 @@ export function ExportButton({ label = "Export" }: { label?: string }) {
       const url = URL.createObjectURL(await response.blob());
       const link = document.createElement("a");
       link.href = url;
-      link.download = "jobtrackr-applications.csv";
+      link.download = "careercompass-applications.csv";
       document.body.appendChild(link);
       link.click();
       link.remove();

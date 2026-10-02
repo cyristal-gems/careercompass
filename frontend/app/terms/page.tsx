@@ -1,10 +1,10 @@
 import { LegalPage } from "@/components/legal-page";
-export const metadata = { title: "Terms of Use | JobTrackr" };
+export const metadata = { title: "Terms of Use | CareerCompass" };
 export default function Terms() {
   return (
     <LegalPage title="Terms of Use">
       <p>
-        JobTrackr helps you organize applications, interviews, and job-search
+        CareerCompass helps you organize applications, interviews, and job-search
         activity. By using the service, you agree to use it responsibly and
         follow these terms.
       </p>
@@ -12,7 +12,7 @@ export default function Terms() {
       <p>
         Keep your login details private. You are responsible for the information
         you enter and for having permission to store it. You retain ownership of
-        your records and allow JobTrackr to process them to provide the service.
+        your records and allow CareerCompass to process them to provide the service.
       </p>
       <h2>Acceptable use</h2>
       <p>
@@ -22,7 +22,7 @@ export default function Terms() {
       </p>
       <h2>Availability and job-search outcomes</h2>
       <p>
-        JobTrackr is provided as available. Features may change and
+        CareerCompass is provided as available. Features may change and
         interruptions may occur. Analytics describe the records you enter and do
         not guarantee interviews, offers, or employment. Keep an exported copy
         of important application records.

@@ -59,7 +59,7 @@ def export(db: Session = Depends(get_db), user: User = Depends(current_user)):
     return Response(
         service.export_csv(db.scalars(query).all()),
         media_type="text/csv",
-        headers={"Content-Disposition": 'attachment; filename="jobtrackr-applications.csv"'},
+        headers={"Content-Disposition": 'attachment; filename="careercompass-applications.csv"'},
     )
 
 

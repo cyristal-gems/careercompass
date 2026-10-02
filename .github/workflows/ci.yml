@@ -1,4 +1,4 @@
-name: JobTrackr CI
+name: CareerCompass CI
 on:
   push:
   pull_request:
@@ -11,16 +11,16 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_USER: jobtrackr
+          POSTGRES_USER: careercompass
           POSTGRES_PASSWORD: ci-only-password
-          POSTGRES_DB: jobtrackr_test
+          POSTGRES_DB: careercompass_test
         ports: ["5432:5432"]
         options: >-
-          --health-cmd "pg_isready -U jobtrackr -d jobtrackr_test"
+          --health-cmd "pg_isready -U careercompass -d careercompass_test"
           --health-interval 5s --health-timeout 5s --health-retries 10
     env:
-      DATABASE_URL: postgresql+psycopg://jobtrackr:ci-only-password@localhost:5432/jobtrackr_test
-      TEST_DATABASE_URL: postgresql+psycopg://jobtrackr:ci-only-password@localhost:5432/jobtrackr_test
+      DATABASE_URL: postgresql+psycopg://careercompass:ci-only-password@localhost:5432/careercompass_test
+      TEST_DATABASE_URL: postgresql+psycopg://careercompass:ci-only-password@localhost:5432/careercompass_test
       SECRET_KEY: ci-only-non-production-secret-key-at-least-32-characters
     defaults:
       run:

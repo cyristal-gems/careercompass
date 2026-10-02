@@ -12,7 +12,7 @@ from app.models.entities import AuthSession, AuthAttempt, User, utcnow
 
 password_hash = PasswordHash.recommended()
 DUMMY_HASH = password_hash.hash(secrets.token_urlsafe(24))
-COOKIE = "jobtrackr_session"
+COOKIE = "careercompass_session"
 
 
 def digest(value: str) -> str:

@@ -1,5 +1,5 @@
 from collections import Counter, defaultdict
-from datetime import date, timedelta
+from datetime import timedelta
 from statistics import mean
 from sqlalchemy import select
 from sqlalchemy.orm import Session, selectinload
@@ -18,7 +18,7 @@ def calculate(db: Session, user_id: str, days: int = 30, scoped: bool = False) -
         .where(Application.user_id == user_id)
         .options(selectinload(Application.history), selectinload(Application.interviews))
     ).all()
-    today = date.today()
+    today = utcnow().date()
     if scoped:
         apps = [a for a in apps if today - timedelta(days=days - 1) <= a.applied_date <= today]
     submitted = [a for a in apps if a.status != "saved"]

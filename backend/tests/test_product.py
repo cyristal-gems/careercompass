@@ -189,10 +189,10 @@ def test_user_cannot_access_another_users_application(client):
 
 
 def test_login_logout_expiration_and_csrf(client):
-    cookie = client.cookies.get("jobtrackr_session")
+    cookie = client.cookies.get("careercompass_session")
     assert client.post(BASE + "/auth/logout").status_code == 204
     assert client.get(BASE + "/auth/me").status_code == 401
-    client.cookies.set("jobtrackr_session", cookie)
+    client.cookies.set("careercompass_session", cookie)
     assert client.get(BASE + "/auth/me").status_code == 401
     client.cookies.clear()
     assert (
@@ -234,7 +234,7 @@ def test_password_reset_revokes_sessions(client, database):
 def test_session_expiration(client, database):
     from app.models.entities import AuthSession
 
-    cookie = client.cookies.get("jobtrackr_session")
+    cookie = client.cookies.get("careercompass_session")
     with database() as db:
         session = db.get(AuthSession, digest(cookie))
         session.expires_at = utcnow() - timedelta(seconds=1)

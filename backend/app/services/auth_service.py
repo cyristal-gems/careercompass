@@ -42,7 +42,7 @@ def request_reset(db: Session, email: str) -> None:
     db.execute(delete(ResetToken).where(ResetToken.user_id == user.id))
     db.add(ResetToken(token_hash=digest(token), user_id=user.id, expires_at=utcnow() + timedelta(minutes=30)))
     message = EmailMessage()
-    message["Subject"] = "Reset your JobTrackr password"
+    message["Subject"] = "Reset your CareerCompass password"
     message["From"], message["To"] = config.smtp_from, user.email
     url = config.frontend_url.rstrip("/") + "/reset-password?" + urlencode({"token": token})
     message.set_content(

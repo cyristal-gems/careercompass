@@ -8,7 +8,7 @@ from app.api import applications, interviews, contacts, analytics, auth, demo, a
 from app.core.config import settings
 from app.core.database import SessionLocal
 
-app = FastAPI(title="JobTrackr API", version="1.0.0")
+app = FastAPI(title="CareerCompass API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings().allowed_origins,
@@ -42,7 +42,7 @@ async def integrity_error(request: Request, exc: IntegrityError):
 
 @app.exception_handler(Exception)
 async def unhandled_error(request: Request, exc: Exception):
-    logging.getLogger("jobtrackr").exception("Request failed")
+    logging.getLogger("careercompass").exception("Request failed")
     return JSONResponse({"detail": "Something went wrong. Please try again."}, status_code=500)
 
 

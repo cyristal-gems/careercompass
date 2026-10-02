@@ -1,5 +1,6 @@
+import { BrandMark } from "@/components/brand-mark";
 import { ImageResponse } from "next/og";
-export const alt = "JobTrackr — Your job search, in focus.";
+export const alt = "CareerCompass — Your job search, in focus.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -27,9 +28,9 @@ export default function Image() {
             fontSize: 56,
           }}
         >
-          J↗
+          <BrandMark />
         </span>
-        <span style={{ fontSize: 64 }}>JobTrackr</span>
+        <span style={{ fontSize: 64 }}>CareerCompass</span>
       </div>
       <div style={{ fontSize: 64, marginTop: 52 }}>
         Your job search, in focus.

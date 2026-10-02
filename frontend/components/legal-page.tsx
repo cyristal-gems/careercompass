@@ -1,3 +1,4 @@
+import { BrandMark } from "./brand-mark";
 import Link from "next/link";
 export function LegalPage({
   title,
@@ -9,10 +10,8 @@ export function LegalPage({
   return (
     <main className="legal-page">
       <Link className="brand" href="/login">
-        <span className="brand-symbol">
-          J<span>↗</span>
-        </span>
-        JobTrackr
+        <BrandMark />
+        CareerCompass
       </Link>
       <p className="muted">Your job search, in focus.</p>
       <article className="panel padded">

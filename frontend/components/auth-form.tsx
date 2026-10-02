@@ -1,4 +1,5 @@
 "use client";
+import { BrandMark } from "./brand-mark";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -59,10 +60,8 @@ export function AuthForm({
     <div className="auth-layout">
       <div className="auth-story">
         <Link className="brand" href="/login">
-          <span className="brand-symbol">
-            J<span>↗</span>
-          </span>
-          JobTrackr
+          <BrandMark />
+          CareerCompass
         </Link>
         <div className="auth-story-main">
           <span className="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
@@ -95,7 +94,7 @@ export function AuthForm({
       </div>
       <div className="auth-form-side">
         <div className="auth-card">
-          <span className="auth-kicker">WELCOME TO JOBTRACKR</span>
+          <span className="auth-kicker">WELCOME TO CAREERCOMPASS</span>
           <h2>
             {mode === "register"
               ? "Make room for what’s next."
@@ -186,7 +185,7 @@ export function AuthForm({
           <p className="auth-switch">
             {mode === "register"
               ? "Already have an account? "
-              : "New to JobTrackr? "}
+              : "New to CareerCompass? "}
             <Link href={mode === "register" ? "/login" : "/register"}>
               {mode === "register" ? "Sign in" : "Create an account"}
             </Link>

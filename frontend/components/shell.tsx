@@ -1,4 +1,5 @@
 "use client";
+import { BrandMark } from "./brand-mark";
 import {
   createContext,
   useContext,
@@ -146,10 +147,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <X size={18} />
           </button>
           <Link className="brand" href="/dashboard">
-            <span className="brand-symbol">
-              J<span>↗</span>
-            </span>
-            JobTrackr
+            <BrandMark />
+            CareerCompass
           </Link>
           <div className="workspace-label">PERSONAL WORKSPACE</div>
           <nav aria-label="Main navigation">
