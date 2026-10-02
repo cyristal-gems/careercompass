@@ -32,7 +32,7 @@ CareerCompass is a full-stack job application tracking and analytics platform th
 
 ## 🧭 View the Compass Here
 
-[CareerCompass](https://careercompass.vercel.app)
+[CareerCompass](https://acareercompass.vercel.app)
 
 ## 🫅🏽 Contact
 
